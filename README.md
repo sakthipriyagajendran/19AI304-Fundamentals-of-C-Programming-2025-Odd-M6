@@ -53,10 +53,11 @@ int main()
     printf("Enter a number: ");
     scanf("%d", &input);
     displayIncrement(input);
+    }
   
 # Output:
-Enter a number: 1
-101.25  201.50  301.75  402.00  502.25 
+<img width="442" height="267" alt="image" src="https://github.com/user-attachments/assets/4c2bfa6d-b4a6-4485-8cf2-473300b616f9" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
