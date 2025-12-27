@@ -242,12 +242,12 @@ int main()
 # Output:
 Enter details for employee 1:
 Employee Number: 101
-Name: aasha
+Name: Priya
 Salary: 50000
 
 Enter details for employee 2:
 Employee Number: 102
-Name: sanjay
+Name: Shakthi
 Salary: 80000
 
 Enter details for employee 3:
