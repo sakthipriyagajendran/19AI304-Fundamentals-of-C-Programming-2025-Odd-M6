@@ -146,15 +146,8 @@ int main()
     return 0;
 }
 # Output:
-Enter two integers: 10 2
+<img width="421" height="442" alt="image" src="https://github.com/user-attachments/assets/5aa412f5-eb2c-4be7-bd27-ed0654d30149" />
 
-Select an operation:
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-Enter your choice (1-4): 4
-Result = 5
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -241,24 +234,7 @@ int main()
     return 0;
 }
 # Output:
-Enter details for employee 1:
-Employee Number: 101
-Name: Priya
-Salary: 50000
-
-Enter details for employee 2:
-Employee Number: 102
-Name: Shakthi
-Salary: 80000
-
-Enter details for employee 3:
-Employee Number: 103
-Name: Arjun
-Salary: 80000
-
-Employee(s) with the highest salary (80000.00):
-Employee Number: 102, Name: sanjay, Salary: 80000.00
-Employee Number: 103, Name: Arjun, Salary: 80000.00
+<img width="620" height="637" alt="image" src="https://github.com/user-attachments/assets/c1d414cd-f830-4142-aceb-83b105917aa5" />
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -303,54 +279,43 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 #include <stdio.h>
-#include <time.h>
-struct DateOfBirth
-{
+struct Date {
     int day;
     int month;
     int year;
 };
-
-void calculateAge(struct DateOfBirth *dob)
-{
-    time_t t = time(NULL);
-    struct tm current = *localtime(&t);
-
-    int currentDay = current.tm_mday;
-    int currentMonth = current.tm_mon + 1; 
-    int currentYear = current.tm_year + 1900; 
-
-    int ageYears = currentYear - dob->year;
-    int ageMonths = currentMonth - dob->month;
-    int ageDays = currentDay - dob->day;
-    if(ageDays < 0)
-    {
-        ageMonths--;
+void calculateAge(struct Date *birth, struct Date *current) {
+    int ageYears, ageMonths, ageDays;
+    ageYears = current->year - birth->year;
+    ageMonths = current->month - birth->month;
+    ageDays = current->day - birth->day;
+    if (ageDays < 0) {
+        ageMonths -= 1;
         ageDays += 30;
     }
-    if(ageMonths < 0)
-    {
-        ageYears--;
+    if (ageMonths < 0) {
+        ageYears -= 1;
         ageMonths += 12;
     }
 
-    printf("Present Age: %d years, %d months, %d days\n", ageYears, ageMonths, ageDays);
+    printf("Present age: %d years, %d months, %d days\n", ageYears, ageMonths, ageDays);
 }
 
-int main()
-{
-    struct DateOfBirth dob;
+int main() {
+    struct Date birthDate, currentDate;
 
-    printf("Enter date of birth (DD MM YYYY): ");
-    scanf("%d %d %d", &dob.day, &dob.month, &dob.year);
-
-    calculateAge(&dob);
+    printf("Enter current date (DD/MM/YYYY): ");
+    scanf("%d/%d/%d", &currentDate.day, &currentDate.month, &currentDate.year);
+    printf("Enter birth date (DD/MM/YYYY): ");
+    scanf("%d/%d/%d", &birthDate.day, &birthDate.month, &birthDate.year);
+    calculateAge(&birthDate, &currentDate);
 
     return 0;
 }
 # Output:
-Enter date of birth (DD MM YYYY): 21 05 2007
-Present Age: 18 years, 7 months, 5 days
+<img width="467" height="292" alt="image" src="https://github.com/user-attachments/assets/fa7969b7-d178-4e4f-8ed3-e946b61b9451" />
+
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -406,8 +371,8 @@ int main()
     return 0;
 }
 # Output:
-Value as integer: 65
-Value as character: A
+<img width="471" height="397" alt="image" src="https://github.com/user-attachments/assets/9070478c-7e40-4ba1-8746-759730066baf" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
